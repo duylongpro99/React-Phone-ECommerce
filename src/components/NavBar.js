@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
 import  logo from "../logo.svg";
-import styled from 'styled-components';
+import {ButtonContainer} from './Button';
+import styled from "styled-components";
 
 export default class NavBar extends Component {
     render() {
         return (
-            <nav className = "navbar navbar-expand-sm bg-primary navbar-dark px-sm-5">
+            <NavWrapper className = "navbar navbar-expand-sm navbar-dark px-sm-5">
                 {/* 
                 https://www.iconfinder.com/icons/1243689/call_phone_icon
                 Creative Commons (Attribution 3.0 Unported);
@@ -29,29 +30,16 @@ export default class NavBar extends Component {
                         </span>
                     </ButtonContainer>
                 </Link>
-            </nav>
+            </NavWrapper>
         )
     }
 }
 
-const ButtonContainer = styled.button`
-    text-transform: capitalize;
-    font-size : 1.4rem;
-    background: transparent ;
-    border: 0.05rem solid var(--lightBlue);
-    border-radius: 0.5rem;
-    padding: 0.2rem 0.5rem;
-    cursor: pointer;
-    margin: 0.2rem 0.5rem 0.2rem 0; 
-    transition: all 0.5s linear;
-    color: var(--lightGrey);
-    &:hover{
-        background: var(--lightBlue);
-        color: var(--mainDark);
-        margin: 0.1rem 0.4rem 0.3rem 0.1rem; 
-        box-shadow: -1px 1px  var(--mainDark);
-    }
-    &:focus{
-        outline: none;
+const NavWrapper = styled.nav`
+    background: var(--mainBlue);
+    .nav-link{
+        color:var{--mainWhite} !important;
+        font-szie: 1.3rem;
+        text-transform: capitalize;
     }
 `
