@@ -9,9 +9,19 @@ export default class Product extends Component {
     render() {
         const {id, title, price, img, inCart}= this.props.product;
         return (
-            <div >
-                <img src = {img} />
-            </div>
+            <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
+                <div className="card">
+                    <div className="img-container p-5" onClick={console.log('You have clicked on card')}>
+                        <Link to="/details">
+                            <img src={img} alt="Phone" className="card-img-top"/>
+                        </Link>
+                    </div>
+                </div>
+            </ProductWrapper>
         )
     }
 }
+
+const ProductWrapper = styled.div`
+
+` 
