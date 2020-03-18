@@ -9,7 +9,7 @@ export const ButtonContainer = styled.button`
     padding: 0.2rem 0.5rem;
     cursor: pointer;
     margin: 0.2rem 0.5rem 0.2rem 0; 
-    transition: all 0.2s linear;
+    transition: all 0.1s linear;
     color: var(--lightGrey);
     &:hover{
         background: var(--lightBlue);
