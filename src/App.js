@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import { Switch, Route } from "react-router-dom";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,6 +7,7 @@ import Cart from "./components/Cart";
 import Default from "./components/Default";
 import Details from "./components/Details";
 import NavBar from "./components/NavBar";
+import Modal from "./components/Modal";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         <Route path="/details" component={Details} />
         <Route component = {Default} />
       </Switch>
+      <Modal />
     </>
   );
 }
